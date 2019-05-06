@@ -7,8 +7,17 @@ Quickly open your Github/GitLab homepage
 $ npm install -g gitui
 ```
 
+
+
 #### Use
+
 ```
 $ cd repo/dir/path
 $ gitui
 ```
+
+
+
+#### GiF
+
+![gitui](./gitui.gif)
