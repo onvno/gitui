@@ -1,4 +1,19 @@
 #!/usr/bin/env bash
 
-bast=$(git remote -v | grep fetch | head -1 | cut -f2 | cut -d' ' -f1| sed -e's/com:/com\//' -e's/git@/http:\/\//' -e's/\.git$//')
-open ${bast}
+# https://github.com/paulirish/git-open
+# get current open browser command
+case $( uname -s ) in
+  Darwin)   open='open';;
+  MINGW*)   open='start';;
+  MSYS*)    open='start';;
+  CYGWIN*)  open='cygstart';;
+  *)        # Try to detect WSL (Windows Subsystem for Linux)
+            if uname -r | grep -q Microsoft; then
+              open='powershell.exe Start'
+            else
+              open='xdg-open'
+            fi;;
+esac
+
+openCommand=$(git remote -v | grep fetch | head -1 | cut -f2 | cut -d' ' -f1| sed -e's/com:/com\//' -e's/git@/http:\/\//' -e's/\.git$//')
+open ${openCommand}

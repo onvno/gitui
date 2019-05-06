@@ -1,6 +1,6 @@
 {
-  "name": "gogit",
-  "version": "1.0.0",
+  "name": "gitui",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/onvno/gogit.git"
+    "url": "git+https://github.com/onvno/gitui.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/onvno/gogit/issues"
+    "url": "https://github.com/onvno/gitui/issues"
   },
-  "homepage": "https://github.com/onvno/gogit#readme",
+  "homepage": "https://github.com/onvno/gitui#readme",
   "dependencies": {}
 }
