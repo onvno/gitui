@@ -2,6 +2,7 @@
 
 # https://github.com/paulirish/git-open
 # get current open browser command
+
 case $( uname -s ) in
   Darwin)   open='open';;
   MINGW*)   open='start';;
@@ -16,4 +17,12 @@ case $( uname -s ) in
 esac
 
 openCommand=$(git remote -v | grep fetch | head -1 | cut -f2 | cut -d' ' -f1| sed -e's/com:/com\//' -e's/git@/http:\/\//' -e's/\.git$//')
-${open} ${openCommand}
+mergeStr='/merge_requests';
+mergeCommand=${openCommand}${mergeStr}
+
+if [ "$1" == 'merge' ]
+then
+  ${open} ${mergeCommand}
+else
+  ${open} ${openCommand}
+fi

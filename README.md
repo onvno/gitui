@@ -14,6 +14,9 @@ $ npm install -g gitui
 ```
 $ cd repo/dir/path
 $ gitui
+
+# 打开gitlab,方便项目merge使用
+$ gitui merge
 ```
 
 
